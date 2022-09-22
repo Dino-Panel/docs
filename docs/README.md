@@ -16,7 +16,7 @@ This documentation might have missed something, so we'll try and keep it updated
 ## Getting Help
 
 If you're ever confused or need help, do not hesitate to join our
-[Discord](https://discord.gg/QTUmnPNz) for support.
+[Discord](https://discord.gg/pVH5EMeeEE) for support.
 
 ## Purpose of DiskCraft
 
