@@ -2,11 +2,11 @@
 
 :::note
 
-This is V1 of DiskCraft, V2 is not publically released yet. It may be licensed, join our discord to watch for updates
+This is v1.5 of DiskCraft, v2 is not publically released yet. Join our discord to watch for updates
 
 :::
 
-![Image](https://downloads.diskcraft.xyz/static/img/example02.png)
+![Image](https://cdn.crewcraft.gq/diskcraft/img/Screenshot-2022-10-12-161338.png)
 
 ## Requirements
 
