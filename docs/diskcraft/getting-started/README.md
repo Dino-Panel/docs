@@ -123,7 +123,7 @@ Now Grab your Client ID and Client Secret and keep them noted, you'll need these
 
 First do `ufw allow 2250` and `ufw allow 2251`
 
-In **/var/www/html** make a folder called **api** and cd into it
+In **/root** make a folder called **api** and cd into it
 
 Run `sudo npm i secure-random-password jwks-rsa` and `sudo npm i @paypal/checkout-server-sdk`
 
