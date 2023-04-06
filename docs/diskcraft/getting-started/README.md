@@ -49,17 +49,17 @@ NodeJS 14 is now installed
 ## Downloading DiskCraft
 
 Download the source code for diskcraft
-[Here](https://downloads.diskcraft.xyz).
+[Here](https://downloads.diskcraft.xyz/diskcraft.html).
 
 Download the API, WEB, NL, and Configs!
 
 ## Configuration
 
-In order for Diskcraft to work you'll need to configure some things
+In order for DiskCraft to work you'll need to configure some things
 
 Open your code editor, and navigate to `src/App.vue`
 
-scroll down to `api_default: "null"` and replace null with your subdomain with `/api` at the end (https://test.yourdomain.com/api)
+scroll down to `api_default: "null"` and replace null with your subdomain with `/api` at the end (https://billing.yourdomain.com/api)
 
 That's all for Web! (Unless you plan on making some console modifications of your own)
 
@@ -85,9 +85,9 @@ Run this command: `sudo certbot certonly --standalone -d yourdomain.com`
 
 In the configs folder grab `diskcraft` 
 
-Find `server_name` under both server for port 80 and 443 and change billing.temp to your subdomain
+Find `server_name` under both server for port 80 and 443 and change billing.yourdomain.com to your subdomain
 
-On the ssl_certificate lines change the billing.temp pem to your subdomain
+On the ssl_certificate lines change the billing.yourdomain.com pem to your subdomain
 
 Find `proxy_pass` and change the IP to your systems IP address (needs to have http)
 
@@ -105,7 +105,9 @@ Open CMD in the web directory and run the following commands (only after you've 
 
 **2.** `npm run build`
 
-**3.** Upload the contents of **/dist** to **/var/www/html**
+**3.** `mkdir /var/www/diskcraft`
+
+**3.** Upload the contents of **/dist** to **/var/www/diskcraft**
 
 ## Setting up PayPal
 
@@ -125,7 +127,7 @@ First do `ufw allow 2250` and `ufw allow 2251`
 
 In **/root** make a folder called **api** and cd into it
 
-Run `sudo npm i secure-random-password jwks-rsa` and `sudo npm i @paypal/checkout-server-sdk`
+Run `sudo npm i secure-random-password jwks-rsa && sudo npm i @paypal/checkout-server-sdk`
 
 Upload the contents of the API zip you downloaded earlier into it
 
