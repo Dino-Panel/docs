@@ -10,13 +10,6 @@ const projects: Project[] = [
     repo: "DiskCraft/DiskCraft",
     link: "/diskcraft",
   },
-  {
-    title: "DiskCraft V1.5",
-    description:
-      "Easy to use and open source billing system for Pterodactyl and Qemu VPS's",
-    repo: "DiskCraft/diskcraft1.5",
-    link: "/diskcraft/getting-started-I",
-  },
 ];
 
 function Project(project: Project) {

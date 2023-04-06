@@ -1,12 +1,14 @@
-# Getting Started
+---
+slug: /diskcraft/reference/diskcraft-global-configuration
+---
 
-:::note
+![Image](https://downloads.diskcraft.xyz/static/img/example02.png)
 
-This is v1.5 of DiskCraft, v2 is not publically released yet. Join our discord to watch for updates
+# DiskCraft Multi-Instance Config
 
-:::
+DiskCraft isn't just standalone, you can configure it to run in a multi instance mode. This means that you can have 1 web server, but several domains all using it and have their own unique views.
 
-![Image](https://cdn.crewcraft.gq/diskcraft/img/Screenshot-2022-10-12-161338.png)
+This Tutorial will seem very similar to standard installation, however all the things that are needed to run in multi-instance mode are included
 
 ## Requirements
 
@@ -61,6 +63,8 @@ Open your code editor, and navigate to `src/App.vue`
 
 scroll down to `api_default: "null"` and replace null with your subdomain with `/api` at the end (https://test.yourdomain.com/api)
 
+Next go to **knownHosts: {** and add your secondary domain under localhost like this: ![Image](https://downloads.diskcraft.xyz/static/img/example01.png)
+
 That's all for Web! (Unless you plan on making some console modifications of your own)
 
 ## Settings up MYSQL
@@ -71,7 +75,7 @@ Create your database
 
 If your using PHPMyAdmin you can import the file via web after you've created your database
 
-However if your using CLI run this command in the directory your sql file is: `sudo mysql -u <username> -p <database_name> < bil.sql`
+However if your using CLI run this command in the directory your sql file is: `sudo mysql -u <username> -p <database_name> < diskcraft.sql`
 
 once thats done you can open your database via a DB client or PHPMyAdmin and see all the tables, do not remove any of them under any circumstance as it may break your panel.
 
@@ -123,9 +127,9 @@ Now Grab your Client ID and Client Secret and keep them noted, you'll need these
 
 First do `ufw allow 2250` and `ufw allow 2251`
 
-In **/root** make a folder called **api** and cd into it
+In **/var/www/html** make a folder called **api** and cd into it
 
-Run `sudo npm i secure-random-password jwks-rsa` and `sudo npm i @paypal/checkout-server-sdk`
+Run `npm i secure-random-password jwks-rsa` and `npm i @paypal/checkout-server-sdk`
 
 Upload the contents of the API zip you downloaded earlier into it
 
@@ -153,11 +157,27 @@ Put that key in the **Key:** value under **pterodactyl: {**
 
 As for **Server:** that's just your panel link
 
+:::note
+
+For the MultiInstance Diskcraft function, all you have to do is add the API to whatever system you want to host it on. As long as the domain your adding matches the one you put in **App.vue** it'll work
+
+:::
+
 ## Starting the API
 
-**1.** `pm2 start ./index.js --name API`
+In order to make sure the API starts without issue you need to do this first:
 
-**2.** `pm2 startup` and `pm2 save`
+**1.** Do `systemctl stop redis-server`
+
+**2.** In the api directory do `nano redis.sh` and in that file just type `redis-server` and save it
+
+**3.** Now run `pm2 start ./redis.sh --name Redis`
+
+Redis is now running via PM2 instead of systemctl 
+
+**4.** `pm2 start ./index.js --name API`
+
+**5.** `pm2 startup` and `pm2 save`
 
 Now do `pm2 log API` to see if its throwing any errors
 

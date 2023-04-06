@@ -26,6 +26,13 @@ const sidebars = {
           },
           items: ["diskcraft/getting-started/README"],
         },
+        {
+          type: "category",
+          label: "Reference",
+          items: [
+            "diskcraft/reference/diskcraft-global-configuration",
+          ],
+        },
       ],
     },
     {
