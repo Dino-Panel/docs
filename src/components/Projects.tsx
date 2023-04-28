@@ -4,9 +4,9 @@ import styles from "../css/projects.module.css";
 
 const projects: Project[] = [
   {
-    title: "DiskCraft V1",
+    title: "DinO v1",
     description:
-      "Easy to use and open source billing system for Pterodactyl and Qemu VPS's",
+      "Easy to use and open source billing system for Pterodactyl",
     repo: "DiskCraft/DiskCraft",
     link: "/diskcraft",
   },

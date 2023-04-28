@@ -2,7 +2,7 @@
 
 :::note
 
-This is V1 of DiskCraft, V2 is not publically released yet. It may be licensed, join our discord to watch for updates
+This is v1 of DinO, v2 is not publicly released yet. It may be licensed, join our discord to watch for updates.
 
 :::
 
@@ -46,16 +46,16 @@ NodeJS 14 is now installed
 
 **4.** `npm i pm2 -g`
 
-## Downloading DiskCraft
+## Downloading DinO
 
-Download the source code for diskcraft
+Download the source code for DinO
 [Here](https://downloads.diskcraft.xyz/diskcraft.html).
 
 Download the API, WEB, NL, and Configs!
 
 ## Configuration
 
-In order for DiskCraft to work you'll need to configure some things
+In order for DinO to work you'll need to configure some things
 
 Open your code editor, and navigate to `src/App.vue`
 
@@ -93,7 +93,7 @@ Find `proxy_pass` and change the IP to your systems IP address (needs to have ht
 
 Now upload this file to /etc/nginx/sites-available
 
-Run this command: `sudo ln -s /etc/nginx/sites-available/diskcraft /etc/nginx/sites-enabled/diskcraft`
+Run this command: `sudo ln -s /etc/nginx/sites-available/dino /etc/nginx/sites-enabled/dino`
 
 Now restart NGINX with `systemctl restart nginx`
 
@@ -105,9 +105,9 @@ Open CMD in the web directory and run the following commands (only after you've 
 
 **2.** `npm run build`
 
-**3.** `mkdir /var/www/diskcraft`
+**3.** `mkdir /var/www/dino`
 
-**3.** Upload the contents of **/dist** to **/var/www/diskcraft**
+**3.** Upload the contents of **/dist** to **/var/www/dino**
 
 ## Setting up PayPal
 
@@ -143,11 +143,15 @@ If your just using Pterodactyl make sure under **capabilities: {** that **pterod
 
 :::warning
 
-Discord Auth is not currently finished, so we recommend keeping it set to false
+Discord Auth is not currently finished, so we recommend keeping it set to false.
 
 :::
 
-We will make another version of documentation for VPS capabilities at some point, however it does indeed work.
+:::info
+
+There are no VPS documentation, unless you can figure it out for yourself and submit a pull request for documentation it will not be here.
+
+:::
 
 Next go to your Pterodactyl panel and go to **Admin > Application API** and Generate an API key with full permissions.
 
@@ -157,11 +161,11 @@ As for **Server:** that's just your panel link
 
 ## Starting the API
 
-**1.** `pm2 start ./index.js --name API`
+**1.** `pm2 start ./index.js --name panel-server`
 
 **2.** `pm2 startup` and `pm2 save`
 
-Now do `pm2 log API` to see if its throwing any errors
+Now do `pm2 log panel-server` to see if its throwing any errors
 
 If it's not throwing errors your all good to go!
 

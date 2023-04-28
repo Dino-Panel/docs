@@ -5,8 +5,8 @@ const isPreview = process.env.DEPLOY_PREVIEW === "true";
 
 /** @type {import("@docusaurus/types").Config} */
 const base = {
-  title: "DiskCraft Documentation",
-  tagline: "Documentation for anything DiskCraft.",
+  title: "DinO Documentation",
+  tagline: "Documentation for anything DinO.",
   customFields: {
     description:
       "Documentation for all projects under the DiskCraft umbrella, including DiskCraft, Hosting, and WebShare.",
@@ -93,17 +93,12 @@ const base = {
         },
       ],
       navbar: {
-        title: "DiskCraft Docs",
+        title: "DinO Docs",
         logo: {
           alt: "DiskCraft Logo",
-          src: "img/diskcraft2.png",
+          src: "img/Dino-512x-transparent.png",
         },
         items: [
-          {
-            to: "diskcraft",
-            label: "DiskCraft",
-            position: "left",
-          },
           {
             to: "https://downloads.diskcraft.xyz",
             label: "Downloads",
@@ -147,7 +142,7 @@ const base = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DiskCraft and Contributors`,
+        copyright: `Copyright © ${new Date().getFullYear()} DinO and Contributors`,
       },
       prism: {
         additionalLanguages: [
