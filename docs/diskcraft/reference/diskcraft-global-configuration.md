@@ -4,9 +4,9 @@ slug: /diskcraft/reference/diskcraft-global-configuration
 
 ![Image](https://downloads.diskcraft.xyz/static/img/example02.png)
 
-# DiskCraft Multi-Instance Config
+# Dino Multi-Instance Config
 
-DiskCraft isn't just standalone, you can configure it to run in a multi instance mode. This means that you can have 1 web server, but several domains all using it and have their own unique views.
+Dino isn't just standalone, you can configure it to run in a multi instance mode. This means that you can have 1 web server, but several domains all using it and have their own unique views.
 
 This Tutorial will seem very similar to standard installation, however all the things that are needed to run in multi-instance mode are included
 
@@ -48,16 +48,16 @@ NodeJS 14 is now installed
 
 **4.** `npm i pm2 -g`
 
-## Downloading DiskCraft
+## Downloading Dino
 
-Download the source code for diskcraft
+Download the source code for Dino
 [Here](https://downloads.diskcraft.xyz).
 
 Download the API, WEB, NL, and Configs!
 
 ## Configuration
 
-In order for Diskcraft to work you'll need to configure some things
+In order for Dino to work you'll need to configure some things
 
 Open your code editor, and navigate to `src/App.vue`
 

@@ -61,6 +61,8 @@ Open your code editor, and navigate to `src/App.vue`
 
 scroll down to `api_default: "null"` and replace null with your subdomain with `/api` at the end (https://billing.yourdomain.com/api)
 
+Open `src/views/admin/log.vue` and navigate to line 141 and change `https://panel.yourdomain.com` to whatever your Pterodactyl panel link is
+
 That's all for Web! (Unless you plan on making some console modifications of your own)
 
 ## Settings up MYSQL
