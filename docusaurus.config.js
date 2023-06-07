@@ -5,13 +5,13 @@ const isPreview = process.env.DEPLOY_PREVIEW === "true";
 
 /** @type {import("@docusaurus/types").Config} */
 const base = {
-  title: "DinO Documentation",
-  tagline: "Documentation for anything DinO.",
+  title: "Dino Documentation",
+  tagline: "Documentation for anything Dino.",
   customFields: {
     description:
-      "Documentation for all projects under the DiskCraft umbrella, including DiskCraft, Hosting, and WebShare.",
+      "Documentation for all projects under the Dino umbrella.",
   },
-  url: isPreview ? process.env.PREVIEW_URL : "https://docs.diskcraft.xyz",
+  url: isPreview ? process.env.PREVIEW_URL : "https://docs.dinopanel.net",
   baseUrl: isPreview ? process.env.PREVIEW_BASE_URL : "/",
   onBrokenLinks: isCI ? "throw" : "warn",
   onBrokenMarkdownLinks: isCI ? "throw" : "warn",
@@ -93,14 +93,14 @@ const base = {
         },
       ],
       navbar: {
-        title: "DinO Docs",
+        title: "Dino Docs",
         logo: {
           alt: "DiskCraft Logo",
           src: "img/Dino-512x-transparent.png",
         },
         items: [
           {
-            to: "https://downloads.diskcraft.xyz",
+            to: "https://downloads.dinopanel.net",
             label: "Downloads",
             position: "right",
           },
@@ -110,7 +110,7 @@ const base = {
             position: "right",
           },
           {
-            href: "https://github.com/Diskcraft/diskcraft",
+            href: "https://github.com/Dino-Panel",
             className: "header-icon-link header-github-link",
             position: "right",
           },
@@ -133,16 +133,16 @@ const base = {
             items: [
               {
                 label: "Main Site",
-                href: "https://diskcraft.xyz",
+                href: "https://dinopanel.net",
               },
               {
                 label: "GitHub",
-                href: "https://github.com/Diskcraft/diskcraft",
+                href: "https://github.com/Dino-Panel",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DinO and Contributors`,
+        copyright: `Copyright © ${new Date().getFullYear()} Dino and Contributors`,
       },
       prism: {
         additionalLanguages: [

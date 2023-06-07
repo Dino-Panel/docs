@@ -2,7 +2,7 @@
 
 :::note
 
-This is v1 of DinO, v2 is not publicly released yet. It may be licensed, join our discord to watch for updates.
+This is v1 of Dino, v2 is not publicly released yet. It may be licensed, join our discord to watch for updates.
 
 :::
 
@@ -46,16 +46,16 @@ NodeJS 14 is now installed
 
 **4.** `npm i pm2 -g`
 
-## Downloading DinO
+## Downloading Dino
 
-Download the source code for DinO
-[Here](https://downloads.diskcraft.xyz/diskcraft.html).
+Download the source code for Dino
+[Here](https://downloads.dinopanel.net/).
 
 Download the API, WEB, NL, and Configs!
 
 ## Configuration
 
-In order for DinO to work you'll need to configure some things
+In order for Dino to work you'll need to configure some things
 
 Open your code editor, and navigate to `src/App.vue`
 
@@ -95,7 +95,7 @@ Find `proxy_pass` and change the IP to your systems IP address (needs to have ht
 
 Now upload this file to /etc/nginx/sites-available
 
-Run this command: `sudo ln -s /etc/nginx/sites-available/dino /etc/nginx/sites-enabled/dino`
+Run this command: `sudo ln -s /etc/nginx/sites-available/Dino /etc/nginx/sites-enabled/Dino`
 
 Now restart NGINX with `systemctl restart nginx`
 
@@ -107,9 +107,9 @@ Open CMD in the web directory and run the following commands (only after you've 
 
 **2.** `npm run build`
 
-**3.** `mkdir /var/www/dino`
+**3.** `mkdir /var/www/Dino`
 
-**3.** Upload the contents of **/dist** to **/var/www/dino**
+**3.** Upload the contents of **/dist** to **/var/www/Dino**
 
 ## Setting up PayPal
 
@@ -193,11 +193,11 @@ Other than pages and functions, nothing is hard coded. This means that creating 
 
 First open **pterodactyl_package_category**
 
-| code           | name                     | container_template                                                 | nodes   |
-| -------------- | ------------------------ | ------------------------------------------------------------------ |-------- |
-| minecraft_java | Minecraft Java           | [Click to Download](https://downloads.diskcraft.xyz/diskcraft/ct.conf)  | FQDN    |
+| code           | name                  | container_template                                                     | nodes   |
+| -------------- | ----------------------| ---------------------------------------------------------------------- |-------- |
+| minecraft_java | Minecraft Java        | [Click to Download](https://downloads.dinopanel.net/diskcraft/ct.conf) | FQDN    |
 
-Categories are made like that, the container template has the egg information as well as startup script and enviromental variables
+Categories are made like that, the container template has the egg information as well as startup script and environmental variables
 
 The nodes field is meant for whitelisting, allowing only certain products on certain nodes. If you have two nodes and only one of them is in a minecraft field only one node can have minecraft deployed to it
 

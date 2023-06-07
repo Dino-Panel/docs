@@ -51,7 +51,7 @@ NodeJS 14 is now installed
 ## Downloading Dino
 
 Download the source code for Dino
-[Here](https://downloads.diskcraft.xyz).
+[Here](https://downloads.dinopanel.net).
 
 Download the API, WEB, NL, and Configs!
 
@@ -63,7 +63,7 @@ Open your code editor, and navigate to `src/App.vue`
 
 scroll down to `api_default: "null"` and replace null with your subdomain with `/api` at the end (https://test.yourdomain.com/api)
 
-Next go to **knownHosts: {** and add your secondary domain under localhost like this: ![Image](https://downloads.diskcraft.xyz/static/img/example01.png)
+Next go to **knownHosts: {** and add your secondary domain under localhost like this: ![Image](https://downloads.dinopanel.net/static/img/example01.png)
 
 That's all for Web! (Unless you plan on making some console modifications of your own)
 
@@ -205,11 +205,11 @@ Other than pages and functions, nothing is hard coded. This means that creating 
 
 First open **pterodactyl_package_category**
 
-| code           | name                     | container_template                                                 | nodes   |
-| -------------- | ------------------------ | ------------------------------------------------------------------ |-------- |
-| minecraft_java | Minecraft Java           | [Click to Download](https://downloads.diskcraft.xyz/diskcraft/ct.conf)  | FQDN    |
+| code           | name                  | container_template                                                     | nodes   |
+| -------------- | ----------------------| ---------------------------------------------------------------------- |-------- |
+| minecraft_java | Minecraft Java        | [Click to Download](https://downloads.dinopanel.net/diskcraft/ct.conf) | FQDN    |
 
-Categories are made like that, the container template has the egg information as well as startup script and enviromental variables
+Categories are made like that, the container template has the egg information as well as startup script and environmental variables
 
 The nodes field is meant for whitelisting, allowing only certain products on certain nodes. If you have two nodes and only one of them is in a minecraft field only one node can have minecraft deployed to it
 
